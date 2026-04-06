@@ -8,8 +8,9 @@
   font-weight: 400;
 
   color-scheme: light dark;
-  color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
+  /* 기본 텍스트 색상을 검은색 계열로, 배경을 흰색 계열로 수정 */
+  color: #1a1a1a;
+  background-color: #ffffff;
 
   font-synthesis: none;
   text-rendering: optimizeLegibility;
@@ -17,10 +18,16 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
+@media (prefers-color-scheme: dark) {
+  :root {
+    color: #ffffff;
+    background-color: #0f172a;
+  }
+}
+
 body {
   margin: 0;
-  display: flex;
-  place-content: center;
+  display: block; /* Flex 제거하여 일반 레이아웃 복원 */
   min-width: 320px;
   min-height: 100vh;
 }
